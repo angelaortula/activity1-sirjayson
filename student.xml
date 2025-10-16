@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <student id="STU001">
+    <name>Maria Dela Cruz</name>
+    <section>BSIT 4A</section>
+    <tuition_fee>45000.00</tuition_fee>
+    <initial_payout>10000.00</initial_payout>
+  </student>
+
+  <student id="STU002">
+    <name>Juan Santos</name>
+    <section>BSIT 4A</section>
+    <tuition_fee>45000.00</tuition_fee>
+    <initial_payout>15000.00</initial_payout>
+  </student>
+
+  <student id="STU003">
+    <name>Ana Reyes</name>
+    <section>BSIT 3B</section>
+    <tuition_fee>42000.00</tuition_fee>
+    <initial_payout>12000.00</initial_payout>
+  </student>
+</catalog>

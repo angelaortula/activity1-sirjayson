@@ -1,0 +1,126 @@
+:root {
+  --bg: #0b0c10;
+  --card: #121317;
+  --text: #e6e6e6;
+  --muted: #9aa1ad;
+  --accent: #4aa3ff;
+  --border: #22242b;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.container {
+  max-width: 980px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+header h1 { margin: 0 0 8px; }
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.toolbar input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: #0f1116;
+  color: var(--text);
+  border-radius: 8px;
+  outline: none;
+}
+.toolbar button {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.toolbar button:hover { border-color: var(--accent); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+.table-wrapper {
+  overflow: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0f1116;
+}
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+th {
+  position: sticky;
+  top: 0;
+  background: #11131a;
+  cursor: pointer;
+  white-space: nowrap;
+}
+tr:hover td { background: rgba(255,255,255,0.02); }
+
+.status {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+h2 { margin-top: 0; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: #0f1116;
+  color: var(--text);
+  border-radius: 8px;
+  outline: none;
+}
+button[type="submit"] {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+}
+button[type="submit"]:hover { border-color: var(--accent); }
+
+footer.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-bottom: 40px;
+}
+code { color: var(--accent); }

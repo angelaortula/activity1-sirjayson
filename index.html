@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Student Catalog (XML-powered)</title>
+</head>
+<body>
+
+  <header class="container">
+    <h1>Student Catalog (XML-powered)</h1>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search student name or section_" />
+      <button id="exportBtn" type="button" title="Export current data to XML">Export XML</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="table-wrapper">
+        <table id="studentsTable" aria-label="Students table">
+          <thead>
+            <tr>
+              <th data-key="student_id">Student ID</th>
+              <th data-key="student_name">Name</th>
+              <th data-key="section">Section</th>
+              <th data-key="tuition_fee">Tuition Fee</th>
+              <th data-key="initial_payout">Initial Payout</th>
+            </tr>
+          </thead>
+          <tbody id="studentsBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Add a Student</h2>
+      <form id="addForm">
+        <div class="grid">
+          <label>
+            Student ID
+            <input name="student_id" type="text" required />
+          </label>
+          <label>
+            Name
+            <input name="student_name" type="text" required />
+          </label>
+          <label>
+            Section
+            <input name="section" type="text" required />
+          </label>
+          <label>
+            Tuition Fee (₱)
+            <input name="tuition_fee" type="number" min="0" step="0.01" required />
+          </label>
+          <label>
+            Initial Payout (₱)
+            <input name="initial_payout" type="number" min="0" step="0.01" required />
+          </label>
+        </div>
+        <button type="submit">Add Student</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container muted">
+    Run this on a local server (e.g. VS Code Live Server) for <code>fetch</code> to load XML.
+  </footer>
+
+  <!-- Link the JS -->
+  <script src="app.js"></script>
+</body>
+</html>
